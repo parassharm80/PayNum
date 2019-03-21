@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<style>
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	body-sizing: border-box;
+	background-image: url("https://ak7.picdn.net/shutterstock/videos/7257457/thumb/1.jpg");
+    background-size:100%;
+//    background-repeat: no-repeat;
+}
+input[type=text]:focus,input[type=password]:focus{
+background-color: #ddd;
+outline: none;
+}
+button {
+background-color: #2F4F4F;
+color:  white;
+padding:  14px 20px;
+margin: 8px 0;
+border: none;
+curser: pointer;
+width: 100%;
+opacity: 0.9;
+}
+button:hover{
+opacity:1;
+}
+.cancelbtn{
+padding: 14px,20px;
+background-color: #f44336;
+}
+
+</style>
+<body>
+ <div style = "position:absolute; right:550px; top:170px;">
+<form action ="/index" method = "POST">
+Name : <input type = "text" name = "Name" placeholder = "Your Name "><br><br>
+Email : <input type = "text" name = "Email" placeholder = "Your Email "><br><br>
+Password : <input type = "password" name = "Password" placeholder = "Your Password "><br><br>
+<input type = "submit" value = "Submit">
+</form>
+</div>
+</body>
+
+</html>
