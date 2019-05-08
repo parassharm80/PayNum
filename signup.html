@@ -1,0 +1,189 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://www.solodev.com/assets/password/strength.js"></script>
+
+<script type="text/javascript">
+$(function () {
+        $("#btnsubmit").click(function () {
+            var password = $("#password").val();
+            var confirmPassword = $("#confirm_password").val();
+            if (password != confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+            return true;
+        });
+    });
+</script>
+
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial scale = 1.0">
+
+<style>
+body {margin: 0;}
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+ul.topnav li {float: left;}
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+ul.topnav li a.active {
+    font-color :white;
+    font-size :20px; 
+    background-color: #232899;
+}
+ul.topnav li.right {float: right;}
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+#qwe{
+  float: right;
+  background-color: #FDFFFF;
+  opacity: 1;
+  width: 400px;
+  /*height: 92%;*/
+  padding-left: 40px;
+}
+body {
+  background: url("images/img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height : 100%;
+  width : 100%;
+}
+input {
+  width: 100%;
+  padding: 1px 1px;
+  margin: 7px 1px;
+  display: inline-block;
+  border: 1.8px solid #ccc;
+  box-sizing: border-box;
+}
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 5px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 26%;
+}
+button:hover {
+  opacity: 0.8;
+}
+#btnsubmit {
+  background-color: blue;
+}
+</style>
+
+<body>  
+
+<ul class="topnav">
+  <li>
+    <a class="active" href="/">Paynum</a>
+  </li>
+  <li>
+    <a href="#news">News</a>
+  </li>
+  <li>
+    <a href="/contact">Contact</a>
+  </li>
+  <li>
+    <a href="/about">About</a>
+  </li>
+   
+  <li class="right">
+    <a href="/sign-up">Signup</a>
+  </li>
+  <li class="right">
+    <a href="/login">Login</a>
+  </li>
+</ul>
+
+<div id="qwe">
+<form action="/controllers/register-controller" method="POST">  
+<table border="1" cellpadding="4" cellspacing="1">
+  <u> <i> <h1>Sign Up</h1></i></u>
+  <div id="tble">
+    <tr><td>
+    First Name: 
+        </td><td>
+    <input type="text" placeholder="Ex. John" name="Fname" required>
+        </td>
+    </tr>
+    <tr><td>
+    Last Name: 
+        </td><td>
+    <input placeholder="Ex. Enfield" type="text" name="Lname" required>
+        </td>
+    </tr>
+
+    <tr><td>
+    Username: 
+        </td><td>
+    <input type="text" placeholder="Ex. john_123" name="Username" required>
+        </td>
+    </tr>
+
+  <tr><td>
+    E-mail: 
+        </td><td>
+     <input type="email" placeholder="abc@xyz.com" name="email" required>
+        </td>
+    </tr>
+
+  <tr><td>
+    Phone: 
+        </td><td>
+     <input placeholder="xxxxxxxxx" type="tel" pattern="\d{10}" name="phone" required>
+        </td>
+    </tr>
+
+    <tr><td>
+    Date of Birth:
+    </td><td>
+    <input type="date" data-date-inline-picker="true" placeholder="01/01/2000" name="DOB" required><br>
+  </td>
+  </tr>
+
+
+    <tr>
+        <td>
+            Password:
+        </td><td>
+            <input name="password" minlength="8" id="password" placeholder="********" type="password" autocomplete="off" readonly 
+    onfocus="this.removeAttribute('readonly');" required>
+        </td></tr>
+    <tr><td>
+            Confirm Password:
+        </td><td>
+            <input type="password" placeholder="********" name="confirm_password" id="confirm_password" autocomplete="off" readonly 
+    onfocus="this.removeAttribute('readonly');" >
+        </td>
+    </tr>
+  
+</table>  
+<br>
+
+<button type="submit" id="btnsubmit" value="Submit">Register</button>
+</div>
+</form>
+</div>
+</body>  
+</html>

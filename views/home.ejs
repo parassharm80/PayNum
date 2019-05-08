@@ -1,0 +1,138 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+  Home
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {margin: 0;}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {
+  font-color :white;
+  font-size :25px;
+  background-color: #000000;
+}
+
+ul.topnav li.right {
+  font-color :white;
+  font-size :20px;
+  background-color: #000000;
+  float: right;
+}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+body {
+  background: url("images/dashboard.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height : 100%;
+  width : 100%;
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 180px;
+  position: fixed;
+  z-index: 1;
+  top: 58;
+  color: white;
+  left: 0;
+  background-color: #3081C8;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #FFFFFF;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+#nam {
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+<div>
+<ul class="topnav">
+    <li><a class="active" href="#">Paynum</a></li>
+     
+    <li class="right"><a href="/logout">Logout</a></li>
+  </ul>
+</div>
+
+<div class="sidenav">
+  <h2 id="nam"><i><u> <%=  name%> </u></h2>
+  <a href="/home">Home</a>
+  <a href="/profile">Profile</a>
+  <a href="/paypage">Pay</a>
+  <a href="/passbook">Passbook</a>
+  <a href="/addMoney">Add money</a></i>
+</div>
+<div class="main">
+    
+    <div id="contents">
+		<font size = "+5" color="red"><u><b><center>Welcome</u></center></b></font size>
+		<br>
+		PayNum Online Wallet, A Website with all new and advanced features to manage the details of Account, Transactions, Statement and Feedback.
+		<br>
+		<ul>
+		Essential Features of PayNum are-
+		<br>
+		<br>
+		<li>Easy Account Opening</li>
+		<li>No Minimum Balance</li>
+		<li>Free Online Transaction</li>
+		<li>Free SMS Alert</li>
+		</ul>
+	</div>
+</div>
+
+  <!-- <script>alert("Welcome to paynum !")</script> -->
+
+   
+</body>
+</html> 
